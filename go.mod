@@ -1,13 +1,13 @@
-module github.com/ivystreetweb/halie-sync-tool
+module github.com/exampleowner/data-sync-tool
 
 go 1.19
 
 replace (
-	github.com/ivystreetweb/config-tool => ../config-tool
+	github.com/exampleowner/config-tool => ../config-tool
 )
 
 require (
-	github.com/ivystreetweb/config-tool v0.0.0-20231012010748-2e6ae8d99ead
+	github.com/exampleowner/config-tool v0.0.0-20231012010748-2e6ae8d99ead
 	github.com/leaanthony/clir v1.6.0
 	github.com/manifoldco/promptui v0.9.0
 )

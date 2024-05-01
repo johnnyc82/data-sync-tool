@@ -2,7 +2,7 @@
 
 
 
-export GOPRIVATE=github.com/ivystreetweb/config-tool
+export GOPRIVATE=github.com/exampleowner/config-tool
 
 
 go get ./...

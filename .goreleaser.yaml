@@ -49,16 +49,16 @@ brews:
     name: hsync
     folder: Formula
     tap:
-      owner: ivystreetweb
+      owner: exampleowner
       name: homebrew-tools
       branch: master
     download_strategy: GitHubPrivateRepositoryReleaseDownloadStrategy
     custom_require: "lib/private_strategy"
     commit_author:
-      name: ivystreetweb
-      email: web@ivystreet.com.au
-    homepage: "https://github.com/ivystreetweb/halie-sync-tool"
-    description: "Halie Sync Tool: an intermediary tool used by various other tools, that syncs data and assets between local, staging and live."
+      name: exampleowner
+      email: web@exampleowner.com.au
+    homepage: "https://github.com/exampleowner/data-sync-tool"
+    description: "Data Sync Tool: an intermediary tool used by various other tools, that syncs data and assets between local, staging and live."
     skip_upload: auto
 
 

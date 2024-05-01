@@ -4,7 +4,7 @@ import (
 	_ "embed"
 	"log"
 
-	st "github.com/ivystreetweb/halie-sync-tool/synctool"
+	st "github.com/exampleowner/data-sync-tool/synctool"
 
 	"github.com/leaanthony/clir"
 )
@@ -19,8 +19,8 @@ func main() {
 	var live, staging, local bool
 	var data, assets, masterplan, media, all bool
 
-	// Halie Sync CLI created
-	cli := clir.NewCli("hsync", "Halie Sync Tool", version)
+	// Data Sync CLI created
+	cli := clir.NewCli("hsync", "Data Sync Tool", version)
 
 	//
 	// capture flags
@@ -32,11 +32,11 @@ func main() {
 		BoolFlag("live", "sync with production environment", &live).
 		BoolFlag("staging", "sync with staging environment", &staging).
 		BoolFlag("local", "sync with local environment", &local).
-		BoolFlag("data", "sync halie stock & configuration data", &data).
-		BoolFlag("assets", "sync halie assets (images/pdfs etc.)", &assets).
-		BoolFlag("masterplan", "sync halie masterplan", &masterplan).
+		BoolFlag("data", "sync stock & configuration data", &data).
+		BoolFlag("assets", "sync assets (images/pdfs etc.)", &assets).
+		BoolFlag("masterplan", "sync masterplan", &masterplan).
 		BoolFlag("media", "sync wordpress media files (does not sync db)", &media).
-		BoolFlag("all", "sync all halie data & assets", &all).
+		BoolFlag("all", "sync all data & assets", &all).
 		StringFlag("projectname", "project to sync with", &projectName)
 
 	// init command
@@ -46,7 +46,7 @@ func main() {
 	})
 
 	// sync command
-	syncCmd := cli.NewSubCommandInheritFlags("sync", "Sync data and assets for halie sites")
+	syncCmd := cli.NewSubCommandInheritFlags("sync", "Sync data and assets for Data sites")
 	syncCmd.Action(func() error {
 		// capture the flags provided
 		sf := &st.SyncFlags{

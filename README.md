@@ -1,5 +1,8 @@
-# HALIE SYNC TOOL #
+# DATA SYNC TOOL #
 
+# NOTE: NOT TO BE COMPILED, EXAMPLE OF A PREVIOUS INTERNAL SYSTEMS GO APP I MADE FOR FOLIO PURPOSES #
+
+This was a tool to sync data to and from local machines and specific Wordpress sites hosted on the Kinsta cloud platform.
 
 An intermediary tool used by various other tools, that syncs data and assets between local, staging and live.
 
@@ -11,14 +14,14 @@ To do so, you'll need to gain access to our Github account. Get the Personal Tok
 
 Now you can 'tap' our Homebrew tools by running:
 
-    brew tap ivystreetweb/homebrew-tools
+    brew tap exampleowner/homebrew-tools
 
 
 Allowing you to install the LSET tool:
 
     brew install hsync
 
-You will also need to retrieve the halie_sync SSH key, which can be found in Bitwarden.
+You will also need to retrieve the Data_sync SSH key, which can be found in Bitwarden.
 
 This will install our tool, along with the Go binaries.
 

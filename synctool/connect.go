@@ -6,7 +6,7 @@ import (
 	"os"
 	"os/exec"
 
-	ct "github.com/ivystreetweb/config-tool/cli"
+	ct "github.com/exampleowner/config-tool/cli"
 
 	"github.com/manifoldco/promptui"
 )
@@ -39,7 +39,7 @@ func ConnectKinsta(projectName string) error {
 
 	log.Println("Connect to Kinsta site's server...")
 	serverName := fmt.Sprintf("%s@%s", sv.KinstaUserName, sv.KinstaIP)
-	cmdssh := exec.Command("ssh", "-T", "-i", "~/.ssh/halie_sync", serverName, "-p", env)
+	cmdssh := exec.Command("ssh", "-T", "-i", "~/.ssh/Data_sync", serverName, "-p", env)
 	cmdssh.Stdout = os.Stdout
 	cmdssh.Stderr = os.Stderr
 	err = cmdssh.Run()

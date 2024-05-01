@@ -5,7 +5,7 @@ import (
 	"os"
 	"os/exec"
 
-	ct "github.com/ivystreetweb/config-tool/cli"
+	ct "github.com/exampleowner/config-tool/cli"
 )
 
 var dataPathTemplate = "web/app/themes/%s/resources/data"
@@ -116,10 +116,10 @@ func pullCommand(flags *SyncFlags, config ct.Project, path string) (*exec.Cmd, e
 	// build ssh section of command, empty string for Local environment
 	sshParams := ""
 	if flags.Live {
-		sshParams = fmt.Sprintf("ssh -i ~/.ssh/halie_sync -p %s", config.KinstaPortLive)
+		sshParams = fmt.Sprintf("ssh -i ~/.ssh/Data_sync -p %s", config.KinstaPortLive)
 	}
 	if flags.Staging {
-		sshParams = fmt.Sprintf("ssh -i ~/.ssh/halie_sync -p %s", config.KinstaPortStaging)
+		sshParams = fmt.Sprintf("ssh -i ~/.ssh/Data_sync -p %s", config.KinstaPortStaging)
 	}
 
 	// build remote server section of command
@@ -219,10 +219,10 @@ func pushCommand(flags *SyncFlags, config ct.Project, path string) (*exec.Cmd, e
 	// build ssh section of command, empty string for Local environment
 	sshParams := ""
 	if flags.Live {
-		sshParams = fmt.Sprintf("ssh -i ~/.ssh/halie_sync -p %s", config.KinstaPortLive)
+		sshParams = fmt.Sprintf("ssh -i ~/.ssh/Data_sync -p %s", config.KinstaPortLive)
 	}
 	if flags.Staging {
-		sshParams = fmt.Sprintf("ssh -i ~/.ssh/halie_sync -p %s", config.KinstaPortStaging)
+		sshParams = fmt.Sprintf("ssh -i ~/.ssh/Data_sync -p %s", config.KinstaPortStaging)
 	}
 
 	// build remote server section of command
